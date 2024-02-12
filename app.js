@@ -4,9 +4,11 @@ const express = require("express");
 const app = express();
 require("dotenv").config();
 const port = process.env.PORT || 3000;
+console.log(`Current directory: ${process.cwd()}`);
 app.listen(port, () => {
 	console.log(`server is running on the port ${port}`);
 });
+
 app.get("/", (req, res) => {
 	let data = {
 		users: [
